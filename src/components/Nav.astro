@@ -5,7 +5,7 @@ import type { iconPaths } from './IconPaths';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-    { label: 'Home', href: '/portafolio' },
+    { label: 'Home', href: '/portafolio/' },
     { label: 'Trabajo', href: '/portafolio/work/' },
     { label: 'Acerca de mí', href: '/portafolio/about/' },
 ];
@@ -20,7 +20,7 @@ const iconLinks: {
 
 <nav>
     <div class="menu-header">
-        <a href="/portafolio" class="site-title">
+        <a href="/portafolio/" class="site-title">
             <Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
             Víctor Sapuyes
         </a>
@@ -44,7 +44,7 @@ const iconLinks: {
                                 'link',
                                 {
                                     active:
-                                        Astro.url.pathname === href + '/' ||
+                                        Astro.url.pathname === href ||
                                         (href !== '/portafolio' && Astro.url.pathname.startsWith(href)),
                                 },
                             ]}
@@ -82,8 +82,8 @@ const iconLinks: {
                                 'link',
                                 {
                                     active:
-                                        Astro.url.pathname === href + '/' ||
-                                        (href !== '/portafolio' && Astro.url.pathname.startsWith(href)),
+                                        Astro.url.pathname === href ||
+                                        (href !== '/portafolio/' && Astro.url.pathname.startsWith(href)),
                                 },
                             ]}
                             href={href}
