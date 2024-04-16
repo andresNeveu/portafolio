@@ -13,14 +13,10 @@ const projects = (await getCollection('work')).sort(
 );
 ---
 
-<BaseLayout title="My Work | Jeanine White" description="Learn about Jeanine White's most recent projects">
+<BaseLayout title="Mi Trabajo | Víctor Sapuyes" description="Aprende sobres los proyectos de Víctor Sapuyes">
     <div class="stack gap-20">
         <main class="wrapper stack gap-8">
-            <Hero
-                title="My Work"
-                tagline="See my most recent projects below to get an idea of my past experience."
-                align="start"
-            />
+            <Hero title="Mi trabajo" tagline="Mira mis mas recientes proyectos." align="start" />
             <Grid variant="offset">
                 {
                     projects.map((project) => (
